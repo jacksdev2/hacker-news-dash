@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getStory } from '../services/hnAPI';
+import { StoryWrapper } from '../styles/StoryStyles';
 
 export const Story = ({ storyID }) => {
 
@@ -10,5 +11,11 @@ export const Story = ({ storyID }) => {
     }, []);
 
 
-    return <p>{ JSON.stringify(story) }</p>
+    return story && story.url ? (
+        <StoryWrapper data-testid="story">
+            <a href={story.url}><p>{story.title}</p></a>
+            <p>By: {story.author}</p>
+            <p>Posted: {story.time}</p>
+        </StoryWrapper>
+    ) : null;
 }
