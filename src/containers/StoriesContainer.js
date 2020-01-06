@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { getStoryIDs } from '../services/hnAPI';
 import { Story } from '../components/Story';
 
+import { GlobalStyle, StoriesContainerWrapper } from '../styles/StoriesContainerStyles';
+
+
 export const StoriesContainer = () =>{
     const [storyIDs, setStoryIDs] = useState([]);
 
@@ -13,8 +16,11 @@ export const StoriesContainer = () =>{
     }, []);
 
     return  <>
-                <h1>News Stories</h1>
-                {storyIDs.map(storyID => <Story key={storyID} storyID={storyID} />)}
+                <GlobalStyle />
+                <StoriesContainerWrapper data-test-id="stories-container">
+                    <h1>News Stories</h1>
+                    {storyIDs.map(storyID => <Story key={storyID} storyID={storyID} />)}
+                </StoriesContainerWrapper>
             </>
 }
 

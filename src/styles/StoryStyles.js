@@ -1,10 +1,5 @@
-import styled, { createGlobalStyle  } from 'styled-components';
-import { normalize } from 'styled-normalize';
+import styled from 'styled-components';
 
-
-export const GlobalStyle = createGlobalStyle`
-  ${normalize}
-`;
 
 
 export const StoryWrapper = styled.section`
@@ -41,11 +36,11 @@ export const StoryMeta = styled.div`
 
 
     > span:first-child {
-        margin-right: 10px;
+        margin-right: 5px;
     }
 
     > span:not(:first-child):before {
-        content: '-';
+
         margin: 0 7px;
     }
 
