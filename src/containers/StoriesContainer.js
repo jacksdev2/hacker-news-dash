@@ -18,7 +18,7 @@ export const StoriesContainer = () =>{
     return  <>
                 <GlobalStyle />
                 <StoriesContainerWrapper data-test-id="stories-container">
-                    <h1>News Stories</h1>
+                    <h1>+++</h1>
                     {storyIDs.map(storyID => <Story key={storyID} storyID={storyID} />)}
                 </StoriesContainerWrapper>
             </>
