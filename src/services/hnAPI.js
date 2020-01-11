@@ -24,5 +24,8 @@ export const getStory = async storyID => {
     .get(`${storyURL + storyID}.json`)
     .then(({ data }) => data);
 
+    console.log(result)
     return result;
+
+
 }
