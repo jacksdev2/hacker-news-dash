@@ -26,7 +26,7 @@ export const Story = ({ storyID }) => {
                     <StoryMetaElement color="#ccc">By: </StoryMetaElement>{story.by}
                 </span>
                 <span data-testid="story-time">
-                    <StoryMetaElement color="#ccd">Posted: </StoryMetaElement>{moment.unix(story.time).format("MM/DD/YY hh:mm a")}
+                    <StoryMetaElement color="#ccd">Posted: </StoryMetaElement>{moment.unix(story.time).format("MM/DD/YY h:mm a")}
                 </span>
             </StoryMeta>
         </StoryWrapper>
