@@ -18,7 +18,7 @@ export const useInfiniteScroll = () => {
         setLoading(true);
     }, 500);
 
-    useEffect(() => {
+    useEffect(count => {
     
         if (!loading) return;
 
@@ -34,7 +34,7 @@ export const useInfiniteScroll = () => {
 
     }, [loading]);
 
-    useEffect(() => {
+    useEffect(handleScroll => {
     
         window.addEventListener('scroll', handleScroll)
     

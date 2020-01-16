@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getStoryIDs } from '../services/hnAPI';
 import { Story } from '../components/Story';
 

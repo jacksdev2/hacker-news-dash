@@ -23,8 +23,7 @@ export const getStory = async storyID => {
     const result = await axios
     .get(`${storyURL + storyID}.json`)
     .then(({ data }) => data);
-
-    console.log(result)
+        console.log(result)
     return result;
 
 
