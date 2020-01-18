@@ -1,4 +1,3 @@
-import { timeout } from "../../node_modules/@types/q";
 
 export const singleStory = {
     by: "priuz",
